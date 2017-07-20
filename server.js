@@ -61,18 +61,20 @@ app.get('/*', function(req, res) {
     // is already in db
     mongo.connect(url, function(err, db) {
       if (err) throw err;
-      console.log('connected to db, for redirection');
+      urlToShorten = parseInt(urlToShorten, 10);
+      console.log('connected to db, for redirection', urlToShorten);
       var collection = db.collection('urlKeys');
       
       redirUrl(function(data) {
-        var sending = data.passedurl;
-        res.redirect(sending);
+        // var sending = data.passedurl;
+        res.redirect(data[0].passedurl);
       });
       
       function redirUrl(callback) {
-        collection.find({shortenkey : urlToShorten}, function(err, docs) {
+        collection.find({shortenkey : urlToShorten}).toArray(function(err, docs) {
           test.equal(null, err);
-          console.log(docs + 'key found, redirecting...');
+          console.log('key found, redirecting...');
+          console.log(docs);
           callback(docs);
         });
       }
