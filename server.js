@@ -8,6 +8,7 @@
   //  - search the db for it
   //  - pass the url to be redirected 
   //  - redirect
+  // mongodb://<dbuser>:<dbpassword>@ds047305.mlab.com:47305/heroku_q3hjrckj
 
 const express = require('express'),
       app = express(),

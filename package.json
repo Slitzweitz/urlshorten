@@ -1,10 +1,10 @@
 {
   "name": "chat-example",
-  "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "version": "1.0.0",
+  "description": "a simple microservice to shorten urls",
   "main": "server.js",
   "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "author": "Colin Barlow <colinmbarlow@gmail.com>",
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
