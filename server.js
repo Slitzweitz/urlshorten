@@ -89,31 +89,3 @@ app.get('/*', function(req, res) {
   }
 });
 app.listen(port);
-
-// function insertDoc(db, callback) {
-      //   collection.insertOne(upDoc, function(err, result) {
-      //     assert.equal(err, null);
-      //     callback(result.ips);
-      //   });
-      // }
-
-
-//  use collection.update with upsert set to true,
-//  only updates if there are NO matches with the query,
-//  so if the url passed in does NOT exist, update
-// collection.update({
-//   passedurl : urlToShorten
-// }, {
-//   passedurl : urlToShorten,
-//   shortenkey : randomNumber,
-//   shortenedurl : 'https://ran-dom-heroku.com/' + randomNumber
-// }, 
-// {upsert:true},
-// function(err, docs) {
-//   if (err) throw err;
-//   console.log('updated db', docs);
-//   var updated = docs.message;
-//   res.send({ 
-//     updated
-//   });
-// });
