@@ -1,3 +1,7 @@
 .c9/
 client/
-data/
+data/local/
+data/urlKeys/
+data
+
+config.json

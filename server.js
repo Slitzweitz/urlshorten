@@ -14,7 +14,8 @@ const express = require('express'),
       app = express(),
       port = process.env.PORT || 8080,
       mongo = require('mongodb').MongoClient,
-      url = 'mongodb://localhost:27017/urlKeys',
+      options = require('./options'),
+      url = 'mongodb://' + options.storageConfig.user + ':' + options.storageConfig.password + '@ds047305.mlab.com:47305/heroku_q3hjrckj',
       test = require('assert');
 
 //  accept all characters, including /
