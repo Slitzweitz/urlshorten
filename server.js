@@ -26,7 +26,7 @@ app.get('/*', function(req, res) {
   var upDoc = {
     passedurl : urlToShorten,
     shortenkey : randomNumber,
-    shortenedurl : 'https://ran-dom-heroku.com/' + randomNumber
+    shortenedurl : 'https://blooming-cove-78461.herokuapp.com/' + randomNumber
   };
   //  regex to make sure it is a url
   var urlRegex = /https?\:\/\/(www)?(\w+.){2,}\w+(\/.+)?/g;
